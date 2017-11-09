@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Fancybox3</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="fancybox/dist/jquery.fancybox.min.css">
+</head>
+<body>
+
+	<!-- Your HTML content goes here -->
+	<div class="One-by-one">
+		<h1>One Image Popup</h1>
+		<a href="images/aa.jpg" data-fancybox data-caption="My caption">
+		<img src="images/a.jpg" alt="" />
+		</a>
+		<a href="images/bb.jpg" data-fancybox data-caption="My caption">
+			<img src="images/b.jpg" alt="" />
+		</a>
+		<a href="images/cc.jpg" data-fancybox data-caption="My caption">
+			<img src="images/c.jpg" alt="" />
+		</a>		
+	</div>
+	<div class="Looping">
+		<h1>Looping of images</h1>
+		<a href="images/aa.jpg" data-fancybox="images" data-caption="My caption">
+		<img src="images/a.jpg" alt="" />
+		</a>
+		<a href="images/bb.jpg" data-fancybox="images" data-caption="My caption">
+			<img src="images/b.jpg" alt="" />
+		</a>
+		<a href="images/cc.jpg" data-fancybox="images" data-caption="My caption">
+			<img src="images/c.jpg" alt="" />
+		</a>		
+	</div>
+
+	<div class="videopop">
+		<a data-fancybox href="https://www.youtube.com/watch?v=CxvQbKWVjyk">
+	      YouTube video - hide controls and info
+	    </a>
+	</div>
+	
+	<!-- JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="fancybox/dist/jquery.fancybox.min.js"></script>
+	<script type="text/javascript">
+		$().fancybox({
+		  selector : '[data-fancybox="images"]',
+		  loop     : true
+		});
+	</script>
+	<script type="text/javascript">
+		$().fancybox({
+		  selector : '[data-fancybox="images"]',
+		  loop     : true
+		});
+	</script>
+	<script type="text/javascript">
+		$('[data-fancybox]').fancybox({
+		  youtube : {
+		    controls : 0,
+		    showinfo : 0
+		  }
+		});
+	</script>
+</body>
+</html>
